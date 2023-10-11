@@ -13,29 +13,25 @@ const ChartComponent: React.FC<ChartComponentProps> = ({ data }) => {
   const chartRef: RefObject<HTMLCanvasElement> = React.createRef();
 
   useEffect(() => {
-    let newChart: ChartJS | null = null; // Initialize the newChart variable
-
-    if (chart) {
-      chart.destroy(); // Destroy the existing chart if it exists
-    }
-
     if (chartRef.current) {
       const ctx = chartRef.current.getContext('2d');
       if (ctx) {
-        newChart = new ChartJS(ctx, {
+        if (chart) {
+          chart.destroy();
+        }
+
+        const newChart = new ChartJS(ctx, {
           type: 'bar',
           data: data,
         });
 
         setChart(newChart);
+
+        return () => {
+          newChart.destroy();
+        };
       }
     }
-
-    return () => {
-      if (newChart) {
-        newChart.destroy(); // Destroy the chart when the component unmounts
-      }
-    };
   }, [data]);
 
   return <canvas ref={chartRef} id="myChart" />;
