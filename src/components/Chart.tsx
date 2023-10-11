@@ -26,7 +26,7 @@ function Chart({ spaces }: { spaces: Space[] }) {
   };
 
   return (
-    <div className="chart-container w-[900px]">
+    <div className="chart-container w-[900px] mx-auto">
       <ChartComponent data={data} />
     </div>
   );

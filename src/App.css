@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  /* background-color: rgb(65, 0, 129);
+  color: white; */
+}
+
+h1, p, label {
+  font-family: 'IBM Plex Sans', sans-serif;
+}

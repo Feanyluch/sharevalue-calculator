@@ -13,7 +13,7 @@ interface Space {
 
 function SpaceCard({ space }: { space: Space }) {
   return (
-    <div className="border p-4 my-2 cursor-pointer">
+    <div className="border-2 p-4 my-2 cursor-pointer rounded-lg hover:border hover:border-orange-500 hover:border-2">
       <h2 className="text-lg font-bold">{space.name}</h2>
       <p>Type: {space.type}</p>
       <p>Size: {space.size} sq ft</p>
