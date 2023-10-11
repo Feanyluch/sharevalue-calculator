@@ -18,7 +18,7 @@ const InputForm: React.FC<InputFormProps> = ({ userInput, handleInputChange }) =
           type="text"
           name="type"
           placeholder="Space Type"
-          className="border p-2 mr-2 outline-orange-500 rounded-lg"
+          className="border p-2 mr-2 outline-orange-500 rounded-lg text-[#0B0B29]"
           value={userInput.type}
           onChange={handleInputChange}
         />
@@ -30,7 +30,7 @@ const InputForm: React.FC<InputFormProps> = ({ userInput, handleInputChange }) =
           type="number"
           name="size"
           placeholder="Space Size (sq ft)"
-          className="border p-2 mr-2 outline-orange-500 rounded-lg"
+          className="border p-2 mr-2 outline-orange-500 rounded-lg text-[#0B0B29]"
           value={userInput.size}
           onChange={handleInputChange}
         />
@@ -42,7 +42,7 @@ const InputForm: React.FC<InputFormProps> = ({ userInput, handleInputChange }) =
           type="text"
           name="location"
           placeholder="Location"
-          className="border p-2 mr-2 outline-orange-500 rounded-lg"
+          className="border p-2 mr-2 outline-orange-500 rounded-lg text-[#0B0B29]"
           value={userInput.location}
           onChange={handleInputChange}
         />

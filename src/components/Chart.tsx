@@ -18,7 +18,7 @@ function Chart({ spaces }: { spaces: Space[] }) {
       {
         label: 'Potential Savings',
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
+        borderColor: '#ffffff',
         borderWidth: 1,
         data: spaces.map((space) => parseFloat(space.potentialSavings || '0')),
       },
